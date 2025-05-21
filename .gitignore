@@ -1,0 +1,3 @@
+event_manager/.env
+/events
+db.sqlite3

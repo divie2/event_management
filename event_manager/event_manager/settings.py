@@ -82,22 +82,22 @@ WSGI_APPLICATION = 'event_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 # Database
-# default_db = os.getenv("DATABASE_URL")
-# if not default_db:
+default_db = os.getenv("DATABASE_URL")
+if not default_db:
 
-#     default_db = f"postgres://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST', 'localhost')}:{os.getenv('DB_PORT', '5432')}/{os.getenv('DB_NAME')}"
+    default_db = f"postgres://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST', 'localhost')}:{os.getenv('DB_PORT', '5432')}/{os.getenv('DB_NAME')}"
 
-# DATABASES = {
-#     "default": dj_database_url.parse(default_db, conn_max_age=600, conn_health_checks=True)
-# }
+DATABASES = {
+    "default": dj_database_url.parse(default_db, conn_max_age=600, conn_health_checks=True)
+}
 
 
 # Password validation
