@@ -3,7 +3,7 @@ from django.db import models
 
 class User(AbstractUser):
     email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.IntegerField(max_length=20)
     full_name = models.CharField(max_length=100)
 
     USERNAME_FIELD = 'email'
