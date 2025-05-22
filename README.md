@@ -83,7 +83,7 @@ Example login response:
 }
 ```
 
-Event Endpoints
+## Event Endpoints
 
 | Endpoint            | Method | Description        |
 | ------------------- | ------ | ------------------ |
@@ -101,9 +101,7 @@ Authorization: Bearer <access_token>
 
 ## API Documentation
 
-Swagger: http://localhost:8000/swagger/
-
-ReDoc: http://localhost:8000/redoc/
+Swagger: (https://event-management-api-2djy.onrender.com/swagger/)
 
 ## Project Structure
 
